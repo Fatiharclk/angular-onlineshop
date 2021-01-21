@@ -1,28 +1,44 @@
 <div class="simple-login-container">
-    <h2>Login Form</h2>
+    
     <div class="alert alert-danger" *ngIf="errorMessage!=null">
     {{errorMessage}}
 </div>
-    <form #form="ngForm" (ngSubmit)="login(form)" class="m-3">
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input name="username" [(ngModel)]="username" required type="text" class="form-control"
-                    placeholder="Username">
+    <form>
+
+    </form>
+
+
+    <form #form="ngForm" (ngSubmit)="login(form)" class="m-3"> 
+        <div class="content-box" style="padding-top: 20px; background-color:whitesmoke; ">
+            <a href="#"><img src="assets/admin.png" alt="Örnek Resim" /></a>
+            <h2>Admin Giriş</h2>
+            <br>
+            <div class="row">
+                <div class="col-md-12 form-group" style="height: 50px; width: 30px;">
+                    <input name="username" [(ngModel)]="username" required type="text" class="form-control " 
+                        placeholder="Username">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="password" name="password" [(ngModel)]="password" required placeholder="Enter your Password"
+                        class="form-control">
+                </div> 
+            </div>
+            <div class="text-center">
+                Şifremi unuttum ?
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <button class="btn btn-block btn-login" routerLink="/" style="background-color: tomato;">Geri Dön</button>
+                </div>
+                
+                <div class="col-md-6 form-group">
+                    <button class="btn btn-block btn-login" type="submit" style="background-color: yellowgreen;">Giriş</button>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="password" name="password" [(ngModel)]="password" required placeholder="Enter your Password"
-                    class="form-control">
-            </div> 
-        </div>
-        <div class="row">
-            <div class="col-md-6 form-group">
-                <button class="btn btn-block btn-login" routerLink="/">Geri Dön</button>
-            </div>
-            <div class="col-md-6 form-group">
-                <button class="btn btn-block btn-login" type="submit">Giriş</button>
-            </div>
-        </div>
+        
     </form>
 </div>

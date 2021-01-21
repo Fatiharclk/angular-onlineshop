@@ -1,8 +1,23 @@
-<div class="list-grop">
-    <button href="#" (click)="changeCategory()" class="list-group-item list-group-item-action">
-        Tüm Kategoriler
-    </button>
-    <button *ngFor="let c of categories" (click)="changeCategory(c)" href="#"
-        class="list-group-item list-group-item-action"
-        [class.active]="c==selectedCategory">{{c.name}}</button>
+
+<div class="content-box" style="background-color:whitesmoke;">
+    <div class="list-grop">
+        <button href="#" (click)="changeCategory()" class="list-group-item list-group-item-action">
+            <i class="fa fa-hotjar"></i> &nbsp;Popüler
+        </button>
+        <button href="#" (click)="changeCategory()" class="list-group-item list-group-item-action">
+            <i class="fa fa-star"></i> &nbsp;Haftasının Yıldızları
+         </button>
+         <button href="#" (click)="changeCategory()" class="list-group-item list-group-item-action">
+            <i class="fa fa-users"></i> &nbsp;Kullanıcı Önerileri
+         </button>
+    </div>
+    <br>
+    <div class="list-grop">
+        <button href="#" (click)="changeCategory()" class="list-group-item list-group-item-action">
+            Tüm Kategoriler
+        </button>
+        <button *ngFor="let c of categories" (click)="changeCategory(c)" href="#"
+            class="list-group-item list-group-item-action"
+            [class.active]="c==selectedCategory">{{c.name}}</button>
+    </div>
 </div>
