@@ -1,0 +1,37 @@
+<h5>
+    {{ editing ? "Edit": "Create" }} Product
+  </h5>
+  
+  <form #form="ngForm" (ngSubmit)="save(form)">
+    <div class="form-group">
+      <label>Name</label>
+      <input class="form-control" id="name"  #name="ngModel" name="name" [(ngModel)]="product.name" required>
+      <div *ngIf="name.invalid&&name.dirty" class="alert alert-danger">Ürün adı gereklidir.</div>
+    </div>
+    <div class="form-group">
+      <label>Price</label>
+      <input class="form-control" id="price"  #price="ngModel" name="price" [(ngModel)]="product.price" required>
+      <div *ngIf="price.invalid&&price.dirty" class="alert alert-danger">Ürün fiyatı gereklidir.</div>
+    </div>
+    <div class="form-group">
+      <label>Image</label>
+      <input class="form-control" id="imageUrl"  #imageUrl="ngModel" name="imageUrl" [(ngModel)]="product.imageUrl" required>
+      <div *ngIf="imageUrl.invalid&&imageUrl.dirty" class="alert alert-danger">Ürün resmi gereklidir.</div>
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <textarea class="form-control" id="description"   #description="ngModel" name="description" [(ngModel)]="product.description" required></textarea>
+      <div *ngIf="description.invalid&&description.dirty" class="alert alert-danger">Ürün Açıklaması gereklidir.</div>
+    </div>
+    <div class="form-group">
+      <select class="form-control" #category="ngModel" [(ngModel)]="product.category" required name="category"
+          id="category">
+          <option *ngFor="let kategori of categories" [value]="kategori.id">{{kategori.name}}</option>
+      </select>
+      <div *ngIf="category.invalid&&category.touched" class="alert alert-danger">Kategori gereklidir.</div>
+  </div>
+    <button type="submit" class="btn btn-primary">
+      {{ editing ? "Edit": "Create" }} Product
+    </button>
+    <button class="btn btn-warning" routerLink="/admin/main/products">Cancel</button>
+  </form>

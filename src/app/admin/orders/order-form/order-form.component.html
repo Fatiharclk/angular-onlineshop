@@ -1,0 +1,32 @@
+  <p>ORDERS</p>
+  <form #orderform="ngForm" (ngSubmit)="OrderSave(orderform)">
+    <div class="form-group">
+      <label>Name</label>
+      <input readonly class="form-control" name="name" [(ngModel)]="siparis.name">
+    </div>
+    <div class="form-group">
+      <label>Address</label>
+      <input readonly class="form-control" name="address" [(ngModel)]="siparis.address">
+    </div>
+    <div class="form-group">
+      <label>City</label>
+      <input readonly class="form-control" name="city" [(ngModel)]="siparis.city">
+    </div>
+    <div class="form-group">
+      <label>Phone</label>
+      <input readonly class="form-control" name="phone" [(ngModel)]="siparis.phone">
+    </div>
+    <div class="form-group">
+      <label>E-mail</label>
+      <input readonly class="form-control" name="email" [(ngModel)]="siparis.email">
+    </div>
+    <div class="form-group">
+      <select class="form-control" name="orderstate" [(ngModel)]="siparis.orderstate">
+      <option *ngFor="let state of enumKeys" [value]="state" >{{enumorderstate[state]}}</option>
+  </select>
+    </div>
+    <button type="submit" class="btn btn-primary">
+      Sipariş Güncelle
+    </button>
+    <button class="btn btn-warning" routerLink="/admin/main/orders">Cancel</button>
+  </form>
