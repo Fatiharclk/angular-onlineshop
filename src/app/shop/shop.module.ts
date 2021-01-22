@@ -11,11 +11,12 @@ import { RouterModule } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { SliderComponent } from './slider/slider.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
     imports: [ModelModule, BrowserModule, FormsModule,RouterModule],
-    declarations: [ShopComponent, NavbarComponent, CartSummaryComponent, CartDetailComponent, CheckoutComponent, ProductListComponent, CategoryListComponent, SliderComponent],
+    declarations: [ShopComponent, NavbarComponent, CartSummaryComponent, CartDetailComponent, CheckoutComponent, ProductListComponent, CategoryListComponent, SliderComponent, FooterComponent],
     exports: [ShopComponent,CartDetailComponent, CheckoutComponent]
 })
 
