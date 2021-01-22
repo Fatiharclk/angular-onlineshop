@@ -9,9 +9,12 @@
 
 
     <form #form="ngForm" (ngSubmit)="login(form)" class="m-3"> 
-        <div class="content-box" style="padding-top: 20px; background-color:whitesmoke; ">
-            <a href="#"><img src="assets/admin.png" alt="Örnek Resim" /></a>
-            <h2>Admin Giriş</h2>
+        <div class="content-box" style="padding-top: 20px; background-color:tomato ;">
+            <a href="#"></a>
+            <img src="assets/logo.png" alt=""  style="height: 130px;"/>
+            <br>
+            <br>
+            <h2 style="color: white;"> <i class="fa fa-user"></i>&nbsp;Admin Giriş</h2>
             <br>
             <div class="row">
                 <div class="col-md-12 form-group" style="height: 50px; width: 30px;">
@@ -25,13 +28,13 @@
                         class="form-control">
                 </div> 
             </div>
-            <div class="text-center">
+            <div class="text-center" style="color: white;">
                 Şifremi unuttum ?
             </div>
             <br>
             <div class="row">
                 <div class="col-md-6 form-group">
-                    <button class="btn btn-block btn-login" routerLink="/" style="background-color: tomato;">Geri Dön</button>
+                    <button class="btn btn-block btn-login" routerLink="/" style="background-color:darkorange">Geri Dön</button>
                 </div>
                 
                 <div class="col-md-6 form-group">
