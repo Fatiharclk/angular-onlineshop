@@ -10,11 +10,12 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { RouterModule } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CategoryListComponent } from './category-list/category-list.component';
+import { SliderComponent } from './slider/slider.component';
 
 
 @NgModule({
     imports: [ModelModule, BrowserModule, FormsModule,RouterModule],
-    declarations: [ShopComponent, NavbarComponent, CartSummaryComponent, CartDetailComponent, CheckoutComponent, ProductListComponent, CategoryListComponent],
+    declarations: [ShopComponent, NavbarComponent, CartSummaryComponent, CartDetailComponent, CheckoutComponent, ProductListComponent, CategoryListComponent, SliderComponent],
     exports: [ShopComponent,CartDetailComponent, CheckoutComponent]
 })
 
